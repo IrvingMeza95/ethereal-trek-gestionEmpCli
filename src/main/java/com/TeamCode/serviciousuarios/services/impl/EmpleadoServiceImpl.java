@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmpleadoServiceImpl implements IEmpleadoService {
@@ -27,13 +28,13 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     }
 
     @Override
-    public Empleado buscarPorId(String id) {
-        return empleadoRepo.findById(id).orElseThrow();
+    public Optional<Empleado> buscarPorId(String id) {
+        return empleadoRepo.findById(id);
     }
 
     @Override
     public Empleado editar(Empleado empleado, String id) {
-        Empleado empleadoDb = buscarPorId(id);
+        Empleado empleadoDb = buscarPorId(id).get();
         empleadoDb.setNombre(empleado.getNombre());
         empleadoDb.setApellido(empleado.getApellido());
         empleadoDb.setCelular(empleado.getCelular());

@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClienteServiceImpl implements IClienteService {
@@ -26,13 +27,13 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
-    public Cliente buscarPorId(String id) {
-        return clienteRepo.findById(id).orElseThrow();
+    public Optional<Cliente> buscarPorId(String id) {
+        return clienteRepo.findById(id);
     }
 
     @Override
     public Cliente editar(Cliente cliente, String id) {
-        Cliente clienteDb = buscarPorId(id);
+        Cliente clienteDb = buscarPorId(id).get();
         clienteDb.setNombre(cliente.getNombre());
         clienteDb.setApellido(cliente.getApellido());
         clienteDb.setCelular(cliente.getCelular());

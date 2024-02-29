@@ -4,11 +4,12 @@ import com.TeamCode.serviciousuarios.models.Cliente;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface IClienteService {
     Cliente guardar(Cliente cliente);
-    Cliente buscarPorId(String id);
+    Optional<Cliente> buscarPorId(String id);
     Cliente editar(Cliente cliente, String id);
     void eliminarPorId(String id);
     void eliminarPorDni(String dni);

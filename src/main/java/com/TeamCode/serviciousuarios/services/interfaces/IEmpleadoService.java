@@ -5,11 +5,12 @@ import com.TeamCode.serviciousuarios.models.Empleado;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface IEmpleadoService {
     Empleado guardar(Empleado empleado) throws MyException;
-    Empleado buscarPorId(String id);
+    Optional<Empleado> buscarPorId(String id);
     Empleado editar(Empleado empleado, String id);
     void eliminarPorId(String id);
     void eliminarPorEmail(String email);
