@@ -19,9 +19,7 @@ public abstract class Persona {
     private String apellido;
     @Column(nullable = false, unique = true)
     private String dni;
-    @Column(nullable = false)
     private String fechaNac;
-    @Column(nullable = false)
     private String pais;
     @Column(nullable = false, unique = true)
     private String celular;

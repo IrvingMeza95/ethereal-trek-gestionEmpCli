@@ -1,6 +1,7 @@
 package com.TeamCode.serviciousuarios.controllers;
 
 import com.TeamCode.serviciousuarios.models.Cliente;
+import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.services.interfaces.IClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,14 +18,14 @@ public class ClienteController {
 
     @PostMapping("/crear")
     @ResponseStatus(HttpStatus.CREATED)
-    public Cliente crear(@RequestBody Cliente cliente){
+    public Cliente crear(@RequestBody Usuario cliente){
         return iClienteService.guardar(cliente);
     }
 
-    @GetMapping("/ver/id/{id}")
+    @GetMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Cliente buscarPorId(@PathVariable String id){
-        return iClienteService.buscarPorId(id);
+    public Cliente buscar(@PathVariable String param){
+        return iClienteService.buscarPorIdEmailDniCelular(param);
     }
 
     @PutMapping("/editar/{id}")
@@ -33,10 +34,10 @@ public class ClienteController {
         return iClienteService.editar(cliente,id);
     }
 
-    @DeleteMapping("/eliminar/id/{id}")
+    @DeleteMapping("/{param}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminarPorId(@PathVariable String id){
-        iClienteService.eliminarPorId(id);
+    public void eliminar(@PathVariable String param){
+        iClienteService.eliminar(param);
     }
 
     @GetMapping("/listar")

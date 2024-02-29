@@ -2,6 +2,7 @@ package com.TeamCode.serviciousuarios.controllers;
 
 import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Empleado;
+import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.services.interfaces.IEmpleadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,14 +19,8 @@ public class EmpleadoController {
 
     @PostMapping("/crear")
     @ResponseStatus(HttpStatus.CREATED)
-    public Empleado crear(@RequestBody Empleado empleado) throws MyException {
+    public Empleado crear(@RequestBody Usuario empleado) throws MyException {
         return iEmpleadoService.guardar(empleado);
-    }
-
-    @GetMapping("/ver/id/{id}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Empleado buscarPorId(@PathVariable String id){
-        return iEmpleadoService.buscarPorId(id);
     }
 
     @PutMapping("/editar/{id}")
@@ -34,10 +29,10 @@ public class EmpleadoController {
         return iEmpleadoService.editar(empleado,id);
     }
 
-    @DeleteMapping("/eliminar/id/{id}")
+    @DeleteMapping("/{param}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminarPorId(@PathVariable String id){
-        iEmpleadoService.eliminarPorId(id);
+    public void eliminar(@PathVariable String param){
+        iEmpleadoService.eliminar(param);
     }
 
     @GetMapping("/listar")

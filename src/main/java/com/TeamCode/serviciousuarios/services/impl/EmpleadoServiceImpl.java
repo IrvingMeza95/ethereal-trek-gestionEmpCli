@@ -1,6 +1,7 @@
 package com.TeamCode.serviciousuarios.services.impl;
 
 import com.TeamCode.serviciousuarios.clientes.impl.UsuariosRestImpl;
+import com.TeamCode.serviciousuarios.enums.Cargo;
 import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Empleado;
 import com.TeamCode.serviciousuarios.models.Usuario;
@@ -20,20 +21,23 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     private UsuariosRestImpl usuariosRest;
 
     @Override
-    public Empleado guardar(Empleado empleado) throws MyException {
+    public Empleado guardar(Usuario empleado) throws MyException {
         if (empleado.getPassword() == null || empleado.getPassword().equals(""))
             throw new MyException("La contraseña no puede ser nula.");
-        return empleadoRepo.save(empleado);
-    }
-
-    @Override
-    public Empleado buscarPorId(String id) {
-        return empleadoRepo.findById(id).orElseThrow();
+        Empleado nuevoEmpleado = new Empleado();
+        nuevoEmpleado.setNombre(empleado.getNombre());
+        nuevoEmpleado.setApellido(empleado.getApellido());
+        nuevoEmpleado.setEmail(empleado.getEmail());
+        nuevoEmpleado.setDni(empleado.getDni());
+        nuevoEmpleado.setCelular(empleado.getCelular());
+        nuevoEmpleado.setCargo(Cargo.VENDEDOR);
+        nuevoEmpleado.setSueldo(0D);
+        return empleadoRepo.save(nuevoEmpleado);
     }
 
     @Override
     public Empleado editar(Empleado empleado, String id) {
-        Empleado empleadoDb = buscarPorId(id);
+        Empleado empleadoDb = buscarPorIdEmailDniCelular(id);
         empleadoDb.setNombre(empleado.getNombre());
         empleadoDb.setApellido(empleado.getApellido());
         empleadoDb.setCelular(empleado.getCelular());
@@ -49,8 +53,10 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     }
 
     @Override
-    public void eliminarPorId(String id) {
-        empleadoRepo.deleteById(id);
+    public void eliminar(String param) {
+        Empleado empleado = buscarPorIdEmailDniCelular(param);
+        usuariosRest.eliminar(empleado.getEmail());
+        empleadoRepo.delete(empleado);
     }
 
     @Override
@@ -59,8 +65,8 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     }
 
     @Override
-    public Empleado buscarPorEmail(String email) {
-        return empleadoRepo.findByEmail(email);
+    public Empleado buscarPorIdEmailDniCelular(String param) {
+        return empleadoRepo.buscarPorIdEmailDniCelular(param);
     }
 
 }

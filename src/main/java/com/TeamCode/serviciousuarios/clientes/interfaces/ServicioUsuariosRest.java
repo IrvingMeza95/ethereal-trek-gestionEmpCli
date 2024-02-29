@@ -5,15 +5,12 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
-@FeignClient("servicio-autentificacion-usuarios")
-public interface IAuthUsuarioRest {
+@FeignClient("servicioUsuarios")
+public interface ServicioUsuariosRest {
     @PutMapping("/auth/editar/email/{email}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     Usuario editar(@RequestBody Usuario usuario, @PathVariable String email);
-    @DeleteMapping("/auth/eliminar/id/{id}")
+    @DeleteMapping("/auth/{param}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminarPorId(@PathVariable String id);
-    @DeleteMapping("/auth/eliminar/email/{email}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminarPorEmail(@PathVariable String email);
+    void eliminar(@PathVariable String param);
 }
