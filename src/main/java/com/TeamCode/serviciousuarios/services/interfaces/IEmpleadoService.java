@@ -12,7 +12,6 @@ public interface IEmpleadoService {
     Empleado buscarPorId(String id);
     Empleado editar(Empleado empleado, String id);
     void eliminarPorId(String id);
-    void eliminarPorEmail(String email);
     List<Empleado> listar();
     Empleado buscarPorEmail(String email);
 }

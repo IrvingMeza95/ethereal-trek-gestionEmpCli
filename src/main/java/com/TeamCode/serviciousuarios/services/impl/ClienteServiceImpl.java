@@ -50,25 +50,8 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
-    public void eliminarPorDni(String dni) {
-        clienteRepo.deleteByDni(dni);
-    }
-
-    @Override
-    public void eliminarPorEmail(String email) {
-        usuariosRest.eliminarPorEmail(email);
-        Cliente cliente = clienteRepo.findByEmail(email);
-        clienteRepo.delete(cliente);
-    }
-
-    @Override
     public List<Cliente> listar() {
         return clienteRepo.findAll();
-    }
-
-    @Override
-    public Cliente buscarPorDni(String dni) {
-        return clienteRepo.findByDni(dni);
     }
 
 }

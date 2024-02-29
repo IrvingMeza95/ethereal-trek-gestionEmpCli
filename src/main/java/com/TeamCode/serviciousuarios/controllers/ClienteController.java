@@ -27,12 +27,6 @@ public class ClienteController {
         return iClienteService.buscarPorId(id);
     }
 
-    @GetMapping("/ver/dni/{dni}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Cliente buscarPorDni(@PathVariable String dni){
-        return iClienteService.buscarPorDni(dni);
-    }
-
     @PutMapping("/editar/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Cliente editar(@RequestBody Cliente cliente, @PathVariable String id){
@@ -43,18 +37,6 @@ public class ClienteController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void eliminarPorId(@PathVariable String id){
         iClienteService.eliminarPorId(id);
-    }
-
-    @DeleteMapping("/eliminar/dni/{dni}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminarPorDni(@PathVariable String dni){
-        iClienteService.eliminarPorDni(dni);
-    }
-
-    @DeleteMapping("/eliminar/email/{email}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminarPorEmail(@PathVariable String email){
-        iClienteService.eliminarPorEmail(email);
     }
 
     @GetMapping("/listar")

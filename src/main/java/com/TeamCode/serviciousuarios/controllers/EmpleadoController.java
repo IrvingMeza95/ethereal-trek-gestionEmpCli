@@ -40,12 +40,6 @@ public class EmpleadoController {
         iEmpleadoService.eliminarPorId(id);
     }
 
-    @DeleteMapping("/eliminar/email/{email}")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminarPorEmail(@PathVariable String email){
-        iEmpleadoService.eliminarPorEmail(email);
-    }
-
     @GetMapping("/listar")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public List<Empleado> listar(){

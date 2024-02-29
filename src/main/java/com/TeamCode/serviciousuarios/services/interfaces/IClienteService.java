@@ -11,9 +11,5 @@ public interface IClienteService {
     Cliente buscarPorId(String id);
     Cliente editar(Cliente cliente, String id);
     void eliminarPorId(String id);
-    void eliminarPorDni(String dni);
-    void eliminarPorEmail(String email);
     List<Cliente> listar();
-
-    Cliente buscarPorDni(String dni);
 }

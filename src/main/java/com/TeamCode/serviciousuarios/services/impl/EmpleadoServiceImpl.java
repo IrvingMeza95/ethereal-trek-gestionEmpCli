@@ -54,14 +54,6 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     }
 
     @Override
-    public void eliminarPorEmail(String email) {
-        usuariosRest.eliminarPorEmail(email);
-        Empleado empleado = buscarPorEmail(email);
-        empleadoRepo.delete(empleado);
-
-    }
-
-    @Override
     public List<Empleado> listar() {
         return empleadoRepo.findAll();
     }
