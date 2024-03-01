@@ -34,8 +34,8 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
-    public Cliente editar(Cliente cliente, String id) {
-        Cliente clienteDb = buscarPorIdEmailDniCelular(id);
+    public Cliente editar(Cliente cliente, String param) {
+        Cliente clienteDb = buscarPorIdEmailDniCelular(param);
         clienteDb.setNombre(cliente.getNombre());
         clienteDb.setApellido(cliente.getApellido());
         clienteDb.setCelular(cliente.getCelular());

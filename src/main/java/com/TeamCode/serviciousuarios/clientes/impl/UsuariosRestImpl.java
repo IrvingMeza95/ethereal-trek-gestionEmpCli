@@ -12,14 +12,15 @@ public class UsuariosRestImpl {
     @Autowired
     private ServicioUsuariosRest servicioUsuariosRest;
 
-    public Usuario editar(Persona persona, String email){
+    public void editar(Persona persona, String email){
         Usuario usuario = new Usuario();
         usuario.setNombre(persona.getNombre());
         usuario.setApellido(persona.getApellido());
         usuario.setEmail(persona.getEmail());
         usuario.setPassword(persona.getPassword());
         usuario.setDni(persona.getDni());
-        return servicioUsuariosRest.editar(usuario,email);
+        usuario.setCelular(persona.getCelular());
+        servicioUsuariosRest.editar(usuario,email);
     }
 
     public void eliminar(String param){

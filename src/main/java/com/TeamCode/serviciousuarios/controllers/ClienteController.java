@@ -28,10 +28,10 @@ public class ClienteController {
         return iClienteService.buscarPorIdEmailDniCelular(param);
     }
 
-    @PutMapping("/editar/{id}")
+    @PutMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Cliente editar(@RequestBody Cliente cliente, @PathVariable String id){
-        return iClienteService.editar(cliente,id);
+    public Cliente editar(@RequestBody Cliente cliente, @PathVariable String param){
+        return iClienteService.editar(cliente,param);
     }
 
     @DeleteMapping("/{param}")

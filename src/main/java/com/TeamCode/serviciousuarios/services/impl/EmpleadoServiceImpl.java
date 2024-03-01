@@ -30,14 +30,15 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
         nuevoEmpleado.setEmail(empleado.getEmail());
         nuevoEmpleado.setDni(empleado.getDni());
         nuevoEmpleado.setCelular(empleado.getCelular());
+        nuevoEmpleado.setPassword(empleado.getPassword());
         nuevoEmpleado.setCargo(Cargo.VENDEDOR);
         nuevoEmpleado.setSueldo(0D);
         return empleadoRepo.save(nuevoEmpleado);
     }
 
     @Override
-    public Empleado editar(Empleado empleado, String id) {
-        Empleado empleadoDb = buscarPorIdEmailDniCelular(id);
+    public Empleado editar(Empleado empleado, String param) {
+        Empleado empleadoDb = buscarPorIdEmailDniCelular(param);
         empleadoDb.setNombre(empleado.getNombre());
         empleadoDb.setApellido(empleado.getApellido());
         empleadoDb.setCelular(empleado.getCelular());

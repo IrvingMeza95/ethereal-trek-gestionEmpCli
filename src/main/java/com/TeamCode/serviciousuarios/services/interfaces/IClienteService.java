@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface IClienteService {
     Cliente guardar(Usuario cliente);
-    Cliente editar(Cliente cliente, String id);
+    Cliente editar(Cliente cliente, String param);
     void eliminar(String param);
     List<Cliente> listar();
     Cliente buscarPorIdEmailDniCelular(String param);

@@ -23,10 +23,16 @@ public class EmpleadoController {
         return iEmpleadoService.guardar(empleado);
     }
 
-    @PutMapping("/editar/{id}")
+    @GetMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Empleado editar(@RequestBody Empleado empleado, @PathVariable String id){
-        return iEmpleadoService.editar(empleado,id);
+    public Empleado buscar(@PathVariable String param){
+        return iEmpleadoService.buscarPorIdEmailDniCelular(param);
+    }
+
+    @PutMapping("/{param}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Empleado editar(@RequestBody Empleado empleado, @PathVariable String param){
+        return iEmpleadoService.editar(empleado,param);
     }
 
     @DeleteMapping("/{param}")
