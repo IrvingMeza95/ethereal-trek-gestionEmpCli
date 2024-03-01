@@ -14,5 +14,7 @@ public class Usuario {
     private String password;
     private String celular;
     private String dni;
+    private Boolean enable;
+    private Integer intentos;
 
 }

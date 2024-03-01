@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmpleadoServiceImpl implements IEmpleadoService {
@@ -67,7 +68,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
 
     @Override
     public Empleado buscarPorIdEmailDniCelular(String param) {
-        return empleadoRepo.buscarPorIdEmailDniCelular(param);
+        return Optional.of(empleadoRepo.buscarPorIdEmailDniCelular(param)).orElseThrow();
     }
 
 }

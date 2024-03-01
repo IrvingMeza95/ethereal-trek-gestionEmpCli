@@ -1,6 +1,5 @@
 package com.TeamCode.serviciousuarios.services.impl;
 
-import com.TeamCode.serviciousuarios.clientes.impl.PaisesRestImpl;
 import com.TeamCode.serviciousuarios.clientes.impl.UsuariosRestImpl;
 import com.TeamCode.serviciousuarios.models.Cliente;
 import com.TeamCode.serviciousuarios.models.Usuario;
@@ -17,8 +16,6 @@ public class ClienteServiceImpl implements IClienteService {
 
     @Autowired
     private ClienteRepo clienteRepo;
-    @Autowired
-    private PaisesRestImpl paisesRest;
     @Autowired
     private UsuariosRestImpl usuariosRest;
 
