@@ -38,7 +38,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     }
 
     @Override
-    public Empleado editar(Empleado empleado, String param) {
+    public Empleado editar(Empleado empleado, String param) throws MyException {
         Empleado empleadoDb = buscarPorIdEmailDniCelular(param);
         empleadoDb.setNombre(empleado.getNombre());
         empleadoDb.setApellido(empleado.getApellido());
@@ -55,7 +55,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     }
 
     @Override
-    public void eliminar(String param) {
+    public void eliminar(String param) throws MyException {
         Empleado empleado = buscarPorIdEmailDniCelular(param);
         usuariosRest.eliminar(empleado.getEmail());
         empleadoRepo.delete(empleado);
@@ -67,8 +67,11 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     }
 
     @Override
-    public Empleado buscarPorIdEmailDniCelular(String param) {
-        return Optional.of(empleadoRepo.buscarPorIdEmailDniCelular(param)).orElseThrow();
+    public Empleado buscarPorIdEmailDniCelular(String param) throws MyException {
+        Optional<Empleado> empleado = Optional.of(empleadoRepo.buscarPorIdEmailDniCelular(param));
+        if (!empleado.isPresent())
+            throw new MyException("No se encontró ningún empleado asociado a " + param + ".");
+        return empleado.get();
     }
 
 }

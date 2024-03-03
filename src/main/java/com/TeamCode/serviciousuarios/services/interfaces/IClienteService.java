@@ -1,5 +1,6 @@
 package com.TeamCode.serviciousuarios.services.interfaces;
 
+import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Cliente;
 import com.TeamCode.serviciousuarios.models.Usuario;
 import org.springframework.stereotype.Repository;
@@ -9,8 +10,8 @@ import java.util.List;
 @Repository
 public interface IClienteService {
     Cliente guardar(Usuario cliente);
-    Cliente editar(Cliente cliente, String param);
-    void eliminar(String param);
+    Cliente editar(Cliente cliente, String param) throws MyException;
+    void eliminar(String param) throws MyException;
     List<Cliente> listar();
-    Cliente buscarPorIdEmailDniCelular(String param);
+    Cliente buscarPorIdEmailDniCelular(String param) throws MyException;
 }

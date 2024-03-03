@@ -17,7 +17,7 @@ public class EmpleadoController {
     @Autowired
     private IEmpleadoService iEmpleadoService;
 
-    @PostMapping("/crear")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Empleado crear(@RequestBody Usuario empleado) throws MyException {
         return iEmpleadoService.guardar(empleado);
@@ -25,23 +25,23 @@ public class EmpleadoController {
 
     @GetMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Empleado buscar(@PathVariable String param){
+    public Empleado buscar(@PathVariable String param) throws MyException {
         return iEmpleadoService.buscarPorIdEmailDniCelular(param);
     }
 
     @PutMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Empleado editar(@RequestBody Empleado empleado, @PathVariable String param){
+    public Empleado editar(@RequestBody Empleado empleado, @PathVariable String param) throws MyException {
         return iEmpleadoService.editar(empleado,param);
     }
 
     @DeleteMapping("/{param}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void eliminar(@PathVariable String param){
+    public void eliminar(@PathVariable String param) throws MyException {
         iEmpleadoService.eliminar(param);
     }
 
-    @GetMapping("/listar")
+    @GetMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
     public List<Empleado> listar(){
         return iEmpleadoService.listar();

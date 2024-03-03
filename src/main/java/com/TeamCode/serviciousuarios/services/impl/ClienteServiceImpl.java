@@ -1,6 +1,7 @@
 package com.TeamCode.serviciousuarios.services.impl;
 
 import com.TeamCode.serviciousuarios.clientes.impl.UsuariosRestImpl;
+import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Cliente;
 import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.repositories.ClienteRepo;
@@ -31,7 +32,7 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
-    public Cliente editar(Cliente cliente, String param) {
+    public Cliente editar(Cliente cliente, String param) throws MyException {
         Cliente clienteDb = buscarPorIdEmailDniCelular(param);
         clienteDb.setNombre(cliente.getNombre());
         clienteDb.setApellido(cliente.getApellido());
@@ -45,7 +46,7 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
-    public void eliminar(String param) {
+    public void eliminar(String param) throws MyException {
         Cliente cliente = buscarPorIdEmailDniCelular(param);
         usuariosRest.eliminar(cliente.getEmail());
         clienteRepo.delete(cliente);
@@ -57,8 +58,11 @@ public class ClienteServiceImpl implements IClienteService {
     }
 
     @Override
-    public Cliente buscarPorIdEmailDniCelular(String param) {
-        return Optional.of(clienteRepo.buscarPorIdEmailDniCelular(param)).orElseThrow();
+    public Cliente buscarPorIdEmailDniCelular(String param) throws MyException {
+        Optional<Cliente> cliente = Optional.of(clienteRepo.buscarPorIdEmailDniCelular(param));
+        if (!cliente.isPresent())
+            throw new MyException("No se encontró ningún cliente asociado a " + param + ".");
+        return cliente.get();
     }
 
 }

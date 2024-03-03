@@ -10,8 +10,8 @@ import java.util.List;
 @Repository
 public interface IEmpleadoService {
     Empleado guardar(Usuario empleado) throws MyException;
-    Empleado editar(Empleado empleado, String param);
-    void eliminar(String param);
+    Empleado editar(Empleado empleado, String param) throws MyException;
+    void eliminar(String param) throws MyException;
     List<Empleado> listar();
-    Empleado buscarPorIdEmailDniCelular(String param);
+    Empleado buscarPorIdEmailDniCelular(String param) throws MyException;
 }
