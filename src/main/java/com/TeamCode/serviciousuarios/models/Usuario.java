@@ -14,7 +14,7 @@ public class Usuario {
     private String password;
     private String celular;
     private String dni;
-    private Boolean enable;
+    private Boolean enabled;
     private Integer intentos;
 
     public String getId() {
@@ -73,12 +73,12 @@ public class Usuario {
         this.dni = dni;
     }
 
-    public Boolean getEnable() {
-        return enable;
+    public Boolean getEnabled() {
+        return enabled;
     }
 
-    public void setEnable(Boolean enable) {
-        this.enable = enable;
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
     }
 
     public Integer getIntentos() {

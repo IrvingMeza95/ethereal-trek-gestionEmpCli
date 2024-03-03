@@ -12,7 +12,7 @@ public class UsuariosRestImpl {
     @Autowired
     private ServicioUsuariosRest servicioUsuariosRest;
 
-    public void editar(Persona persona, String email){
+    public Usuario editar(Persona persona, String email){
         Usuario usuario = new Usuario();
         usuario.setNombre(persona.getNombre());
         usuario.setApellido(persona.getApellido());
@@ -20,7 +20,9 @@ public class UsuariosRestImpl {
         usuario.setPassword(persona.getPassword());
         usuario.setDni(persona.getDni());
         usuario.setCelular(persona.getCelular());
-        servicioUsuariosRest.editar(usuario,email);
+        usuario.setEnabled(true);
+        usuario.setIntentos(0);
+        return servicioUsuariosRest.editar(usuario,email);
     }
 
     public void eliminar(String param){

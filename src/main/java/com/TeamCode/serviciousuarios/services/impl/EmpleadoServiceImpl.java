@@ -50,7 +50,8 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
         empleadoDb.setCargo(empleado.getCargo());
         empleadoDb.setSueldo(empleado.getSueldo());
         empleadoDb.setPassword(empleado.getPassword());
-        usuariosRest.editar(empleadoDb, empleado.getEmail());
+        Usuario usuario = usuariosRest.editar(empleadoDb, empleado.getEmail());
+        empleadoDb.setPassword(usuario.getPassword());
         return empleadoRepo.save(empleadoDb);
     }
 
