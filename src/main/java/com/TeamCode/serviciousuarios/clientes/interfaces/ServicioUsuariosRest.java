@@ -10,6 +10,9 @@ public interface ServicioUsuariosRest {
     @PutMapping("/auth/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
     Usuario editar(@RequestBody Usuario usuario, @PathVariable String param);
+    @PutMapping("/auth/password/{param}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    Usuario cambiarPassword(@RequestParam String password, @PathVariable String param);
     @DeleteMapping("/auth/{param}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     void eliminar(@PathVariable String param);

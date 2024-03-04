@@ -4,6 +4,8 @@ import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Empleado;
 import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.services.interfaces.IEmpleadoService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,7 @@ public class EmpleadoController {
 
     @Autowired
     private IEmpleadoService iEmpleadoService;
+    private  final Logger log = LoggerFactory.getLogger(EmpleadoController.class);
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -33,6 +36,12 @@ public class EmpleadoController {
     @ResponseStatus(HttpStatus.ACCEPTED)
     public Empleado editar(@RequestBody Empleado empleado, @PathVariable String param) throws MyException {
         return iEmpleadoService.editar(empleado,param);
+    }
+
+    @PutMapping("/password/{param}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public Empleado cambiarPassword(@RequestParam String password, @PathVariable String param) throws MyException {
+        return iEmpleadoService.cambiarPassword(password,param);
     }
 
     @DeleteMapping("/{param}")

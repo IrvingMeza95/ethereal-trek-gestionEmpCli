@@ -17,12 +17,15 @@ public class UsuariosRestImpl {
         usuario.setNombre(persona.getNombre());
         usuario.setApellido(persona.getApellido());
         usuario.setEmail(persona.getEmail());
-        usuario.setPassword(persona.getPassword());
         usuario.setDni(persona.getDni());
         usuario.setCelular(persona.getCelular());
         usuario.setEnabled(true);
         usuario.setIntentos(0);
         return servicioUsuariosRest.editar(usuario,email);
+    }
+
+    public Usuario cambiarPassword(String password, String param){
+        return servicioUsuariosRest.cambiarPassword(password,param);
     }
 
     public void eliminar(String param){

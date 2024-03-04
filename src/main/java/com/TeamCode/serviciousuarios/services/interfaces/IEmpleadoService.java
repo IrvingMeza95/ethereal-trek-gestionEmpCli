@@ -14,4 +14,5 @@ public interface IEmpleadoService {
     void eliminar(String param) throws MyException;
     List<Empleado> listar();
     Empleado buscarPorIdEmailDniCelular(String param) throws MyException;
+    Empleado cambiarPassword(String password, String param) throws MyException;
 }

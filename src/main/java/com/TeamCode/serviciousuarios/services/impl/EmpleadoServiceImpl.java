@@ -75,4 +75,12 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
         return empleado.get();
     }
 
+    @Override
+    public Empleado cambiarPassword(String password, String param) throws MyException {
+        Empleado empleado = buscarPorIdEmailDniCelular(param);
+        Usuario usuario = usuariosRest.cambiarPassword(password, param);
+        empleado.setPassword(usuario.getPassword());
+        return empleadoRepo.save(empleado);
+    }
+
 }
