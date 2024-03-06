@@ -1,12 +1,12 @@
 package com.TeamCode.serviciousuarios.services.impl;
 
-import com.TeamCode.serviciousuarios.clientes.impl.UsuariosRestImpl;
 import com.TeamCode.serviciousuarios.enums.Cargo;
 import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Empleado;
 import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.repositories.EmpleadoRepo;
 import com.TeamCode.serviciousuarios.services.interfaces.IEmpleadoService;
+import com.TeamCode.serviciousuarios.services.interfaces.IUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     @Autowired
     private EmpleadoRepo empleadoRepo;
     @Autowired
-    private UsuariosRestImpl usuariosRest;
+    private IUsuarioService iUsuarioService;
 
     @Override
     public Empleado guardar(Usuario empleado) throws MyException {
@@ -50,7 +50,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
         empleadoDb.setCargo(empleado.getCargo());
         empleadoDb.setSueldo(empleado.getSueldo());
         empleadoDb.setPassword(empleado.getPassword());
-        Usuario usuario = usuariosRest.editar(empleadoDb, empleado.getEmail());
+        Usuario usuario = iUsuarioService.usuarioMapper(empleadoDb, empleado.getEmail());
         empleadoDb.setPassword(usuario.getPassword());
         return empleadoRepo.save(empleadoDb);
     }
@@ -58,7 +58,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     @Override
     public void eliminar(String param) throws MyException {
         Empleado empleado = buscarPorIdEmailDniCelular(param);
-        usuariosRest.eliminar(empleado.getEmail());
+        iUsuarioService.eliminar(empleado.getEmail());
         empleadoRepo.delete(empleado);
     }
 
@@ -78,7 +78,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     @Override
     public Empleado cambiarPassword(String password, String param) throws MyException {
         Empleado empleado = buscarPorIdEmailDniCelular(param);
-        Usuario usuario = usuariosRest.cambiarPassword(password, param);
+        Usuario usuario = iUsuarioService.cambairPassword(password, param);
         empleado.setPassword(usuario.getPassword());
         return empleadoRepo.save(empleado);
     }

@@ -1,0 +1,22 @@
+package com.TeamCode.serviciousuarios.services.interfaces;
+
+import com.TeamCode.serviciousuarios.exceptions.MyException;
+import com.TeamCode.serviciousuarios.models.Persona;
+import com.TeamCode.serviciousuarios.models.Usuario;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface IUsuarioService {
+    Usuario guardar(Usuario usuario) throws MyException;
+    Usuario registrarEmpleado(Usuario empleado) throws MyException;
+    Usuario registrarCliente(Usuario cliente) throws MyException;
+    void eliminar(String param) throws MyException;
+    List<Usuario> listar();
+    Usuario editar(Usuario usuario, String email) throws MyException;
+    Usuario buscarPorIdEmailDniCelular(String param) throws MyException;
+    Usuario cambairPassword(String password, String param) throws MyException;
+    Boolean validarEmail(String email);
+    Usuario usuarioMapper(Persona persona, String email) throws MyException;
+}

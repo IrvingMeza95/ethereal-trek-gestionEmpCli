@@ -1,11 +1,11 @@
 package com.TeamCode.serviciousuarios.services.impl;
 
-import com.TeamCode.serviciousuarios.clientes.impl.UsuariosRestImpl;
 import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Cliente;
 import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.repositories.ClienteRepo;
 import com.TeamCode.serviciousuarios.services.interfaces.IClienteService;
+import com.TeamCode.serviciousuarios.services.interfaces.IUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ public class ClienteServiceImpl implements IClienteService {
     @Autowired
     private ClienteRepo clienteRepo;
     @Autowired
-    private UsuariosRestImpl usuariosRest;
+    private IUsuarioService iUsuarioService;
 
     @Override
     public Cliente guardar(Usuario cliente) {
@@ -41,14 +41,14 @@ public class ClienteServiceImpl implements IClienteService {
         clienteDb.setDni(cliente.getDni());
         clienteDb.setPais(cliente.getPais());
         clienteDb.setFechaNac(cliente.getFechaNac());
-        usuariosRest.editar(clienteDb, cliente.getEmail());
+        iUsuarioService.usuarioMapper(clienteDb, cliente.getEmail());
         return clienteRepo.save(clienteDb);
     }
 
     @Override
     public void eliminar(String param) throws MyException {
         Cliente cliente = buscarPorIdEmailDniCelular(param);
-        usuariosRest.eliminar(cliente.getEmail());
+        iUsuarioService.eliminar(cliente.getEmail());
         clienteRepo.delete(cliente);
     }
 
