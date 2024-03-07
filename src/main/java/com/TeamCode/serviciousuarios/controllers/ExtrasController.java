@@ -16,14 +16,19 @@ public class ExtrasController {
     @Autowired
     private PaisesRestImpl paises;
 
-    @GetMapping("/paises-por-region/{region}")
+    @GetMapping("/region/{region}")
     public List<String> paisesPorRegion(@PathVariable String region){
         return paises.paisesPorRegion(region);
     }
 
-    @GetMapping("/paises")
+    @GetMapping("/todos")
     public List<String> buscarTodos(){
         return paises.buscarTodos();
+    }
+
+    @GetMapping("/codigos-de-llamda")
+    public List<String> codigosDeLlamada(){
+        return paises.extraerCodigosDeLlamadaPorPaises();
     }
 
 }

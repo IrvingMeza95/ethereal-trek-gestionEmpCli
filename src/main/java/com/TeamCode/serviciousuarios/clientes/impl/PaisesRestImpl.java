@@ -20,12 +20,20 @@ public class PaisesRestImpl {
         return extraerPaises(iPaisesRest.buscarTodos());
     }
 
-    public String extraerCodigoDeLlamadaPorPais(String name){
-        Object[] pais = iPaisesRest.buscarPorNombre(name.toLowerCase());
-        String root = (String) ((Map)((Map)pais[0]).get("idd")).get("root");
-        List<String> suffixes = (List<String>) ((Map)((Map)pais[0]).get("idd")).get("suffixes");
-        String callingCode = root + suffixes.get(0);
-        return callingCode;
+    public List<String> extraerCodigosDeLlamadaPorPaises(){
+        Object[] paises = iPaisesRest.buscarTodos();
+        List<String> codigos = new ArrayList<>();
+        for (Object pais : paises){
+            String root = (String) ((Map)((Map)pais).get("idd")).get("root");
+            List<String> suffixes = (List<String>) ((Map)((Map)pais).get("idd")).get("suffixes");
+            if (suffixes != null){
+                for (String codigo : suffixes){
+                    codigos.add(root + codigo);
+                }
+            }
+        }
+        Collections.sort(codigos);
+        return codigos;
     }
 
     private List<String> extraerPaises(Object[] request){
@@ -38,5 +46,7 @@ public class PaisesRestImpl {
         Collections.sort(listaPaises);
         return listaPaises;
     }
+
+
 
 }
