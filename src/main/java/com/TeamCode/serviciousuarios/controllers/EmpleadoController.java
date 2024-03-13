@@ -20,11 +20,11 @@ public class EmpleadoController {
     private IEmpleadoService iEmpleadoService;
     private  final Logger log = LoggerFactory.getLogger(EmpleadoController.class);
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public Empleado crear(@RequestBody Usuario empleado) throws MyException {
-        return iEmpleadoService.guardar(empleado);
-    }
+//    @PostMapping
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public Empleado crear(@RequestBody Usuario empleado) throws MyException {
+//        return iEmpleadoService.guardar(empleado);
+//    }
 
     @GetMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)

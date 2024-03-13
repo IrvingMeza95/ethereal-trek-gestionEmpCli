@@ -17,11 +17,11 @@ public class ClienteController {
     @Autowired
     private IClienteService iClienteService;
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public Cliente crear(@RequestBody Usuario cliente){
-        return iClienteService.guardar(cliente);
-    }
+//    @PostMapping
+//    @ResponseStatus(HttpStatus.CREATED)
+//    public Cliente crear(@RequestBody Usuario cliente){
+//        return iClienteService.guardar(cliente);
+//    }
 
     @GetMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5b9637b0-6081-4185-a87d-aca0afa3c8e9",
+		"_postman_id": "a05b56cf-6e32-4146-95d2-750ba38d1cb1",
 		"name": "gestionEmpCli",
 		"description": "Esta es la documentación oficial de la API de servicio de empleados y clientes y sus extras.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -16,16 +16,6 @@
 						{
 							"name": "buscar",
 							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJpcnZpbmdtZXphOTVAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImFwZWxsaWRvIjoibWV6YSIsImNvcnJlbyI6ImlydmluZ21lemE5NUBnbWFpbC5jb20iLCJleHAiOjE3MDk5NDkxMTksIm5vbWJyZSI6Imlydm5nIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJqdGkiOiI2ZWI2ZmU0Yy1kMWQ2LTQ3NGQtYWZmNy02OWY3MmFhOWIzNzciLCJjbGllbnRfaWQiOiJmcm9udF9hcHAifQ.Vfk8qhRiLtTzov40ZI4qh_Yd_UQ7jbpORA2Z8X6qjTg",
-											"type": "string"
-										}
-									]
-								},
 								"method": "GET",
 								"header": [
 									{
@@ -45,7 +35,7 @@
 									"variable": [
 										{
 											"key": "param",
-											"value": "8781112343",
+											"value": "<string>",
 											"description": "(Required) "
 										}
 									]
@@ -63,11 +53,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/empleados/:param",
+											"raw": "http://localhost:8080/api/usuarios/empleados/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"empleados",
 												":param"
 											],
@@ -160,11 +154,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/empleados/:param",
+											"raw": "http://localhost:8080/api/usuarios/empleados/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"empleados",
 												":param"
 											],
@@ -219,11 +217,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/empleados/:param",
+											"raw": "http://localhost:8080/api/usuarios/empleados/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"empleados",
 												":param"
 											],
@@ -243,7 +245,8 @@
 								}
 							]
 						}
-					]
+					],
+					"description": "El 'param' puede ser tanto el id, enail, dni o celular del empleado."
 				},
 				{
 					"name": "password",
@@ -299,11 +302,15 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/empleados/password/:param?password=<string>",
+													"raw": "http://localhost:8080/api/usuarios/empleados/password/:param?password=<string>",
+													"protocol": "http",
 													"host": [
-														"{{baseUrl}}"
+														"localhost"
 													],
+													"port": "8080",
 													"path": [
+														"api",
+														"usuarios",
 														"empleados",
 														"password",
 														":param"
@@ -343,16 +350,6 @@
 				{
 					"name": "listar 1",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [
 							{
@@ -382,11 +379,15 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/empleados",
+									"raw": "http://localhost:8080/api/usuarios/empleados",
+									"protocol": "http",
 									"host": [
-										"{{baseUrl}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
+										"api",
+										"usuarios",
 										"empleados"
 									]
 								}
@@ -404,91 +405,9 @@
 							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"VENDEDOR\",\n    \"sueldo\": \"<double>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"cargo\": \"VENDEDOR\",\n    \"sueldo\": \"<double>\"\n  }\n]"
 						}
 					]
-				},
-				{
-					"name": "crear 1",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "*/*"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/empleados",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"empleados"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Created",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
-									"options": {
-										"raw": {
-											"headerFamily": "json",
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/empleados",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"empleados"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "text",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "*/*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"cargo\": \"VENDEDOR\",\n  \"sueldo\": \"<double>\"\n}"
-						}
-					]
 				}
-			]
+			],
+			"description": "End points para la api de gestión de enpleados. La creación se hace desde el controlador 'auth'."
 		},
 		{
 			"name": "clientes",
@@ -536,11 +455,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/clientes/:param",
+											"raw": "http://localhost:8080/api/usuarios/clientes/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"clientes",
 												":param"
 											],
@@ -633,11 +556,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/clientes/:param",
+											"raw": "http://localhost:8080/api/usuarios/clientes/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"clientes",
 												":param"
 											],
@@ -692,11 +619,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/clientes/:param",
+											"raw": "http://localhost:8080/api/usuarios/clientes/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"clientes",
 												":param"
 											],
@@ -716,7 +647,8 @@
 								}
 							]
 						}
-					]
+					],
+					"description": "El 'param' puede ser tanto el id, enail, dni o celular del empleado."
 				},
 				{
 					"name": "listar 2",
@@ -750,11 +682,15 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/clientes",
+									"raw": "http://localhost:8080/api/usuarios/clientes",
+									"protocol": "http",
 									"host": [
-										"{{baseUrl}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
+										"api",
+										"usuarios",
 										"clientes"
 									]
 								}
@@ -772,91 +708,9 @@
 							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n]"
 						}
 					]
-				},
-				{
-					"name": "crear 2",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							},
-							{
-								"key": "Accept",
-								"value": "*/*"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
-							"options": {
-								"raw": {
-									"headerFamily": "json",
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseUrl}}/clientes",
-							"host": [
-								"{{baseUrl}}"
-							],
-							"path": [
-								"clientes"
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Created",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
-									"options": {
-										"raw": {
-											"headerFamily": "json",
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseUrl}}/clientes",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"clientes"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "text",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "*/*"
-								}
-							],
-							"cookie": [],
-							"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\"\n}"
-						}
-					]
 				}
-			]
+			],
+			"description": "End points para la gestión de clientes. La creación se hace desde el controlador 'auth'."
 		},
 		{
 			"name": "auth",
@@ -904,11 +758,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/auth/:param",
+											"raw": "http://localhost:8080/api/usuarios/auth/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"auth",
 												":param"
 											],
@@ -929,7 +787,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
 								}
 							]
 						},
@@ -949,7 +807,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -992,7 +850,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1001,11 +859,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/auth/:param",
+											"raw": "http://localhost:8080/api/usuarios/auth/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"auth",
 												":param"
 											],
@@ -1026,7 +888,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
 								}
 							]
 						},
@@ -1060,11 +922,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/auth/:param",
+											"raw": "http://localhost:8080/api/usuarios/auth/:param",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"auth",
 												":param"
 											],
@@ -1084,7 +950,8 @@
 								}
 							]
 						}
-					]
+					],
+					"description": "El 'param' puede ser tanto el id, enail, dni o celular del empleado."
 				},
 				{
 					"name": "password",
@@ -1140,11 +1007,15 @@
 													}
 												],
 												"url": {
-													"raw": "{{baseUrl}}/auth/password/:param?password=<string>",
+													"raw": "http://localhost:8080/api/usuarios/auth/password/:param?password=<string>",
+													"protocol": "http",
 													"host": [
-														"{{baseUrl}}"
+														"localhost"
 													],
+													"port": "8080",
 													"path": [
+														"api",
+														"usuarios",
 														"auth",
 														"password",
 														":param"
@@ -1173,7 +1044,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
+											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
 										}
 									]
 								}
@@ -1200,7 +1071,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1236,7 +1107,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1245,11 +1116,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/auth/empleado",
+											"raw": "http://localhost:8080/api/usuarios/auth/empleado",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"auth",
 												"empleado"
 											]
@@ -1290,7 +1165,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1326,7 +1201,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1335,11 +1210,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{baseUrl}}/auth/cliente",
+											"raw": "http://localhost:8080/api/usuarios/auth/cliente",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"auth",
 												"cliente"
 											]
@@ -1393,11 +1272,15 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/auth",
+									"raw": "http://localhost:8080/api/usuarios/auth",
+									"protocol": "http",
 									"host": [
-										"{{baseUrl}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
+										"api",
+										"usuarios",
 										"auth"
 									]
 								}
@@ -1412,11 +1295,12 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  }\n]"
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  }\n]"
 						}
 					]
 				}
-			]
+			],
+			"description": "End points para el registro de empleados y clientes."
 		},
 		{
 			"name": "roles",
@@ -1454,11 +1338,15 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "{{baseUrl}}/roles/:id",
+											"raw": "http://localhost:8080/api/usuarios/roles/:id",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"roles",
 												":id"
 											],
@@ -1512,11 +1400,15 @@
 									}
 								],
 								"url": {
-									"raw": "{{baseUrl}}/roles",
+									"raw": "http://localhost:8080/api/usuarios/roles",
+									"protocol": "http",
 									"host": [
-										"{{baseUrl}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
+										"api",
+										"usuarios",
 										"roles"
 									]
 								}
@@ -1567,7 +1459,8 @@
 							"path": [
 								"roles"
 							]
-						}
+						},
+						"description": "Para el correcto funcionamiento, es necesario que al crear un role, el atributo 'nombre' se le añada el prefijo 'ROLE_'. Emeplo:\n\n- PAra role admin: el nombre seria 'ROLE_ADMIN'."
 					},
 					"response": [
 						{
@@ -1595,11 +1488,15 @@
 									}
 								},
 								"url": {
-									"raw": "{{baseUrl}}/roles",
+									"raw": "http://localhost:8080/api/usuarios/roles",
+									"protocol": "http",
 									"host": [
-										"{{baseUrl}}"
+										"localhost"
 									],
+									"port": "8080",
 									"path": [
+										"api",
+										"usuarios",
 										"roles"
 									]
 								}
@@ -1618,7 +1515,8 @@
 						}
 					]
 				}
-			]
+			],
+			"description": "End points para la gestión de los roles."
 		},
 		{
 			"name": "extras",
@@ -1629,6 +1527,9 @@
 						{
 							"name": "buscar Todos",
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -1659,11 +1560,15 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/extras/todos",
+											"raw": "http://localhost:8080/api/usuarios/extras/todos",
+											"protocol": "http",
 											"host": [
-												"{{baseUrl}}"
+												"localhost"
 											],
+											"port": "8080",
 											"path": [
+												"api",
+												"usuarios",
 												"extras",
 												"todos"
 											]
@@ -1694,6 +1599,9 @@
 								{
 									"name": "paises Por Region",
 									"request": {
+										"auth": {
+											"type": "noauth"
+										},
 										"method": "GET",
 										"header": [
 											{
@@ -1772,6 +1680,9 @@
 						{
 							"name": "codigos De Llamada",
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [
 									{
@@ -1846,6 +1757,7 @@
 			"listen": "prerequest",
 			"script": {
 				"type": "text/javascript",
+				"packages": {},
 				"exec": [
 					""
 				]
@@ -1855,6 +1767,7 @@
 			"listen": "test",
 			"script": {
 				"type": "text/javascript",
+				"packages": {},
 				"exec": [
 					""
 				]
@@ -1868,14 +1781,8 @@
 		},
 		{
 			"key": "token",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJpcnZpbmdtZXphOTVAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImFwZWxsaWRvIjoibWV6YSIsImNvcnJlbyI6ImlydmluZ21lemE5NUBnbWFpbC5jb20iLCJleHAiOjE3MDk5NDkxMTksIm5vbWJyZSI6Imlydm5nIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJqdGkiOiI2ZWI2ZmU0Yy1kMWQ2LTQ3NGQtYWZmNy02OWY3MmFhOWIzNzciLCJjbGllbnRfaWQiOiJmcm9udF9hcHAifQ.Vfk8qhRiLtTzov40ZI4qh_Yd_UQ7jbpORA2Z8X6qjTg",
-			"type": "string",
-			"disabled": true
-		},
-		{
 			"value": "",
-			"type": "string",
-			"disabled": true
+			"type": "string"
 		}
 	]
 }
