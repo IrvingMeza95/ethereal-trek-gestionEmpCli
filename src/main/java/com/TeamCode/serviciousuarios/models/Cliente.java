@@ -7,10 +7,8 @@ import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@Builder
+@NoArgsConstructor
 @Entity
 @Table(name = "clientes")
 public class Cliente extends Persona {
-    public Cliente() {
-    }
 }

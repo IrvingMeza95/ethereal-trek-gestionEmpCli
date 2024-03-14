@@ -12,7 +12,7 @@ public class APIDocConfig {
     public OpenAPI customOpenAPI(){
         return new OpenAPI()
                 .info(new Info()
-                                .title("TeamCode APIs")
+                                .title("gestionEmpCli API")
                                 .version("1.0")
                                 .description("Esta es la documentación oficial de la API de servicio de empleados y clientes y sus extras.")
 //                        .termsOfService("http://swagger.io/terms/")

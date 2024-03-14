@@ -18,20 +18,4 @@ public class Empleado extends Persona {
     private Cargo cargo;
     @Column(nullable = false)
     private Double sueldo;
-
-    public Cargo getCargo() {
-        return cargo;
-    }
-
-    public void setCargo(Cargo cargo) {
-        this.cargo = cargo;
-    }
-
-    public Double getSueldo() {
-        return sueldo;
-    }
-
-    public void setSueldo(Double sueldo) {
-        this.sueldo = sueldo;
-    }
 }

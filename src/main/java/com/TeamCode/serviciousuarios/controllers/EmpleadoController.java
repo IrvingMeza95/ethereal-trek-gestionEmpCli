@@ -1,11 +1,10 @@
 package com.TeamCode.serviciousuarios.controllers;
 
+import com.TeamCode.serviciousuarios.dtos.EmpleadoDTO;
 import com.TeamCode.serviciousuarios.exceptions.MyException;
+import com.TeamCode.serviciousuarios.mappers.EmpleadoMapper;
 import com.TeamCode.serviciousuarios.models.Empleado;
-import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.services.interfaces.IEmpleadoService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -18,30 +17,25 @@ public class EmpleadoController {
 
     @Autowired
     private IEmpleadoService iEmpleadoService;
-    private  final Logger log = LoggerFactory.getLogger(EmpleadoController.class);
-
-//    @PostMapping
-//    @ResponseStatus(HttpStatus.CREATED)
-//    public Empleado crear(@RequestBody Usuario empleado) throws MyException {
-//        return iEmpleadoService.guardar(empleado);
-//    }
+    @Autowired
+    private EmpleadoMapper empleadoMapper;
 
     @GetMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Empleado buscar(@PathVariable String param) throws MyException {
-        return iEmpleadoService.buscarPorIdEmailDniCelular(param);
+    public EmpleadoDTO buscar(@PathVariable String param) throws MyException {
+        return empleadoMapper.getEmpleadoDTO(iEmpleadoService.buscarPorIdEmailDniCelular(param));
     }
 
     @PutMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Empleado editar(@RequestBody Empleado empleado, @PathVariable String param) throws MyException {
-        return iEmpleadoService.editar(empleado,param);
+    public EmpleadoDTO editar(@RequestBody Empleado empleado, @PathVariable String param) throws MyException {
+        return empleadoMapper.getEmpleadoDTO(iEmpleadoService.editar(empleado,param));
     }
 
     @PutMapping("/password/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Empleado cambiarPassword(@RequestParam String password, @PathVariable String param) throws MyException {
-        return iEmpleadoService.cambiarPassword(password,param);
+    public EmpleadoDTO cambiarPassword(@RequestParam String password, @PathVariable String param) throws MyException {
+        return empleadoMapper.getEmpleadoDTO(iEmpleadoService.cambiarPassword(password,param));
     }
 
     @DeleteMapping("/{param}")
@@ -52,8 +46,8 @@ public class EmpleadoController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public List<Empleado> listar(){
-        return iEmpleadoService.listar();
+    public List<EmpleadoDTO> listar(){
+        return empleadoMapper.getListEmpleadoDTO(iEmpleadoService.listar());
     }
 
 }

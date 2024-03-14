@@ -1,5 +1,6 @@
 package com.TeamCode.serviciousuarios.services.interfaces;
 
+import com.TeamCode.serviciousuarios.dtos.EmpleadoDTO;
 import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Empleado;
 import com.TeamCode.serviciousuarios.models.Usuario;

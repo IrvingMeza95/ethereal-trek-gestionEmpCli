@@ -1,6 +1,8 @@
 package com.TeamCode.serviciousuarios.controllers;
 
+import com.TeamCode.serviciousuarios.dtos.ClienteDTO;
 import com.TeamCode.serviciousuarios.exceptions.MyException;
+import com.TeamCode.serviciousuarios.mappers.ClienteMapper;
 import com.TeamCode.serviciousuarios.models.Cliente;
 import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.services.interfaces.IClienteService;
@@ -16,23 +18,19 @@ public class ClienteController {
 
     @Autowired
     private IClienteService iClienteService;
-
-//    @PostMapping
-//    @ResponseStatus(HttpStatus.CREATED)
-//    public Cliente crear(@RequestBody Usuario cliente){
-//        return iClienteService.guardar(cliente);
-//    }
+    @Autowired
+    private ClienteMapper clienteMapper;
 
     @GetMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Cliente buscar(@PathVariable String param) throws MyException {
-        return iClienteService.buscarPorIdEmailDniCelular(param);
+    public ClienteDTO buscar(@PathVariable String param) throws MyException {
+        return clienteMapper.getClienteDTO(iClienteService.buscarPorIdEmailDniCelular(param));
     }
 
     @PutMapping("/{param}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Cliente editar(@RequestBody Cliente cliente, @PathVariable String param) throws MyException {
-        return iClienteService.editar(cliente,param);
+    public ClienteDTO editar(@RequestBody Cliente cliente, @PathVariable String param) throws MyException {
+        return clienteMapper.getClienteDTO(iClienteService.editar(cliente,param));
     }
 
     @DeleteMapping("/{param}")
@@ -43,8 +41,8 @@ public class ClienteController {
 
     @GetMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public List<Cliente> listar(){
-        return iClienteService.listar();
+    public List<ClienteDTO> listar(){
+        return clienteMapper.getListClienteDTO(iClienteService.listar());
     }
 
 }

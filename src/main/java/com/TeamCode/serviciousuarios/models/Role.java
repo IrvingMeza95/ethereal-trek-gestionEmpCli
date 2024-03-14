@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 @Table(name = "roles")
 public class Role {
@@ -20,20 +19,4 @@ public class Role {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private Roles nombre;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Roles getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(Roles nombre) {
-        this.nombre = nombre;
-    }
 }

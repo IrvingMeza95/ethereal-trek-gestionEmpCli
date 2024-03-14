@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/extras")
-public class ExtrasController {
+@RequestMapping("/paises")
+public class PaisesController {
 
     @Autowired
     private PaisesRestImpl paises;
@@ -21,7 +21,7 @@ public class ExtrasController {
         return paises.paisesPorRegion(region);
     }
 
-    @GetMapping("/todos")
+    @GetMapping
     public List<String> buscarTodos(){
         return paises.buscarTodos();
     }
