@@ -4,6 +4,7 @@ import com.TeamCode.serviciousuarios.models.Role;
 import com.TeamCode.serviciousuarios.services.interfaces.IRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,9 +17,8 @@ public class RoleController {
     private IRoleService iRoleService;
 
     @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public Role crear(@RequestBody Role role){
-        return iRoleService.guardar(role);
+    public ResponseEntity<Role> crear(@RequestBody Role role){
+        return ResponseEntity.ok(iRoleService.guardar(role));
     }
 
     @DeleteMapping("/{id}")
@@ -28,9 +28,8 @@ public class RoleController {
     }
 
     @GetMapping
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public List<Role> listar(){
-        return iRoleService.listar();
+    public ResponseEntity<List<Role>> listar(){
+        return ResponseEntity.ok(iRoleService.listar());
     }
 
 }

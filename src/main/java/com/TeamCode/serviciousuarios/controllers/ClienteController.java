@@ -8,6 +8,7 @@ import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.services.interfaces.IClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,15 +23,13 @@ public class ClienteController {
     private ClienteMapper clienteMapper;
 
     @GetMapping("/{param}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public ClienteDTO buscar(@PathVariable String param) throws MyException {
-        return clienteMapper.getClienteDTO(iClienteService.buscarPorIdEmailDniCelular(param));
+    public ResponseEntity<ClienteDTO> buscar(@PathVariable String param) throws MyException {
+        return ResponseEntity.ok(clienteMapper.getClienteDTO(iClienteService.buscarPorIdEmailDniCelular(param)));
     }
 
     @PutMapping("/{param}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public ClienteDTO editar(@RequestBody Cliente cliente, @PathVariable String param) throws MyException {
-        return clienteMapper.getClienteDTO(iClienteService.editar(cliente,param));
+    public ResponseEntity<ClienteDTO> editar(@RequestBody Cliente cliente, @PathVariable String param) throws MyException {
+        return ResponseEntity.ok(clienteMapper.getClienteDTO(iClienteService.editar(cliente,param)));
     }
 
     @DeleteMapping("/{param}")
@@ -40,9 +39,8 @@ public class ClienteController {
     }
 
     @GetMapping
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public List<ClienteDTO> listar(){
-        return clienteMapper.getListClienteDTO(iClienteService.listar());
+    public ResponseEntity<List<ClienteDTO>> listarClientes(){
+        return ResponseEntity.ok(clienteMapper.getListClienteDTO(iClienteService.listar()));
     }
 
 }

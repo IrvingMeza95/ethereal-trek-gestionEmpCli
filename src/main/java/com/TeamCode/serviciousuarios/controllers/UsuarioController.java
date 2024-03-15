@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,20 +30,18 @@ public class UsuarioController {
 
     @PostMapping("/empleado")
     @ResponseStatus(HttpStatus.CREATED)
-    public Empleado registrarEmpleado(@RequestBody Usuario empleado) throws MyException {
-        return iEmpleadoService.guardar(iUsuarioService.registrarEmpleado(empleado));
+    public ResponseEntity<Empleado> registrarEmpleado(@RequestBody Usuario empleado) throws MyException {
+        return ResponseEntity.ok(iEmpleadoService.guardar(iUsuarioService.registrarEmpleado(empleado)));
     }
 
     @PostMapping("/cliente")
-    @ResponseStatus(HttpStatus.CREATED)
-    public Cliente registrarCliente(@RequestBody Usuario cliente) throws MyException {
-        return iClienteService.guardar(iUsuarioService.registrarCliente(cliente));
+    public ResponseEntity<Cliente> registrarCliente(@RequestBody Usuario cliente) throws MyException {
+        return ResponseEntity.ok(iClienteService.guardar(iUsuarioService.registrarCliente(cliente)));
     }
 
     @GetMapping
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public List<Usuario> listar(){
-        return iUsuarioService.listar();
+    public ResponseEntity<List<Usuario>> listar(){
+        return ResponseEntity.ok(iUsuarioService.listar());
     }
 
     @DeleteMapping("/{param}")
@@ -52,21 +51,18 @@ public class UsuarioController {
     }
 
     @PutMapping("/{param}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Usuario editar(@RequestBody Usuario usuario, @PathVariable String param) throws MyException {
-        return iUsuarioService.editar(usuario,param);
+    public ResponseEntity<Usuario> editar(@RequestBody Usuario usuario, @PathVariable String param) throws MyException {
+        return ResponseEntity.ok(iUsuarioService.editar(usuario,param));
     }
 
     @PutMapping("/password/{param}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Usuario cambiarPassword(@RequestParam String password, @PathVariable String param) throws MyException {
-        return iUsuarioService.cambairPassword(password,param);
+    public ResponseEntity<Usuario> cambiarPassword(@RequestParam String password, @PathVariable String param) throws MyException {
+        return ResponseEntity.ok(iUsuarioService.cambairPassword(password,param));
     }
 
     @GetMapping("/{param}")
-    @ResponseStatus(HttpStatus.ACCEPTED)
-    public Usuario buscarPorIdEmailDniCelular(@PathVariable String param) throws MyException {
-        return iUsuarioService.buscarPorIdEmailDniCelular(param);
+    public ResponseEntity<Usuario> buscarPorIdEmailDniCelular(@PathVariable String param) throws MyException {
+        return ResponseEntity.ok(iUsuarioService.buscarPorIdEmailDniCelular(param));
     }
 
 }
