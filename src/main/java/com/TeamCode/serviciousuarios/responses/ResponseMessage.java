@@ -1,4 +1,4 @@
-package com.TeamCode.serviciousuarios.models;
+package com.TeamCode.serviciousuarios.responses;
 
 import lombok.AllArgsConstructor;
 

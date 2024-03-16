@@ -1,7 +1,8 @@
 package com.TeamCode.serviciousuarios.enums;
 
 public enum Cargo {
-    VENDEDOR ("Vendedor");
+    VENDEDOR ("Vendedor"),
+    CONTADOR ("Contador");
 
     private final String tag;
 

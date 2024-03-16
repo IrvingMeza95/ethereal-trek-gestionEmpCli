@@ -9,6 +9,6 @@ import lombok.*;
 @NoArgsConstructor
 @Builder
 public class EmpleadoDTO extends PersonaDTO {
-    private Cargo cargo;
+    private String cargo;
     private Double sueldo;
 }

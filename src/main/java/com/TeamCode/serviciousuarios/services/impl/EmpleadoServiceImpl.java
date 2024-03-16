@@ -32,7 +32,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
         nuevoEmpleado.setDni(empleado.getDni());
         nuevoEmpleado.setCelular(empleado.getCelular());
         nuevoEmpleado.setPassword(empleado.getPassword());
-        nuevoEmpleado.setCargo(Cargo.VENDEDOR);
+        nuevoEmpleado.setCargo(Cargo.VENDEDOR.name());
         nuevoEmpleado.setSueldo(0D);
         return empleadoRepo.save(nuevoEmpleado);
     }
@@ -70,7 +70,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     @Override
     public Empleado buscarPorIdEmailDniCelular(String param) throws MyException {
         Optional<Empleado> empleado = Optional.of(empleadoRepo.buscarPorIdEmailDniCelular(param));
-        if (!empleado.isPresent())
+        if (empleado.isEmpty())
             throw new MyException("No se encontró ningún empleado asociado a " + param + ".");
         return empleado.get();
     }
