@@ -6,6 +6,7 @@ import com.TeamCode.serviciousuarios.models.Empleado;
 import com.TeamCode.serviciousuarios.models.Usuario;
 import com.TeamCode.serviciousuarios.repositories.EmpleadoRepo;
 import com.TeamCode.serviciousuarios.services.interfaces.IEmpleadoService;
+import com.TeamCode.serviciousuarios.services.interfaces.IPersonaService;
 import com.TeamCode.serviciousuarios.services.interfaces.IUsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,6 +21,8 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     private EmpleadoRepo empleadoRepo;
     @Autowired
     private IUsuarioService iUsuarioService;
+    @Autowired
+    private IPersonaService iPersonaService;
 
     @Override
     public Empleado guardar(Usuario empleado) throws MyException {
@@ -40,13 +43,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
     @Override
     public Empleado editar(Empleado empleado, String param) throws MyException {
         Empleado empleadoDb = buscarPorIdEmailDniCelular(param);
-        empleadoDb.setNombre(empleado.getNombre());
-        empleadoDb.setApellido(empleado.getApellido());
-        empleadoDb.setCelular(empleado.getCelular());
-        empleadoDb.setEmail(empleado.getEmail());
-        empleadoDb.setDni(empleado.getDni());
-        empleadoDb.setPais(empleado.getPais());
-        empleadoDb.setFechaNac(empleado.getFechaNac());
+        iPersonaService.editar(empleadoDb, empleado);
         empleadoDb.setCargo(empleado.getCargo());
         empleadoDb.setSueldo(empleado.getSueldo());
         empleadoDb.setPassword(empleado.getPassword());

@@ -29,4 +29,6 @@ public abstract class Persona {
     private String email;
     @Column(nullable = true)
     private String password;
+    @Column(nullable = true, length = 250)
+    private String direccion;
 }
