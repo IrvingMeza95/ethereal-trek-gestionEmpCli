@@ -14,4 +14,5 @@ public abstract class PersonaDTO {
     private String pais;
     private String celular;
     private String email;
+    private String direccion;
 }

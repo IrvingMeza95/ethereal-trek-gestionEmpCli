@@ -37,7 +37,6 @@ public class UsuarioController {
 
     @CircuitBreaker(name = "generic", fallbackMethod = "metodoAlternativo")
     @PostMapping("/empleado")
-    @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<Empleado> registrarEmpleado(@RequestBody Usuario empleado) throws MyException {
         return ResponseEntity.ok(iEmpleadoService.guardar(iUsuarioService.registrarEmpleado(empleado)));
     }

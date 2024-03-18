@@ -2,6 +2,7 @@ package com.TeamCode.serviciousuarios.mappers;
 
 import com.TeamCode.serviciousuarios.dtos.EmpleadoDTO;
 import com.TeamCode.serviciousuarios.models.Empleado;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -10,18 +11,14 @@ import java.util.stream.Collectors;
 @Component
 public class EmpleadoMapper {
 
+    @Autowired
+    private PersonaMapper personaMapper;
+
     public EmpleadoDTO getEmpleadoDTO(Empleado empleado){
         EmpleadoDTO empleadoDTO = new EmpleadoDTO();
         empleadoDTO.setCargo(empleado.getCargo());
         empleadoDTO.setSueldo(empleado.getSueldo());
-        empleadoDTO.setId(empleado.getId());
-        empleadoDTO.setNombre(empleado.getNombre());
-        empleadoDTO.setApellido(empleado.getApellido());
-        empleadoDTO.setDni(empleado.getDni());
-        empleadoDTO.setFechaNac(empleado.getFechaNac());
-        empleadoDTO.setPais(empleado.getPais());
-        empleadoDTO.setCelular(empleado.getCelular());
-        empleadoDTO.setEmail(empleado.getEmail());
+        personaMapper.fillPersonaDTO(empleadoDTO, empleado);
         return empleadoDTO;
     }
 
