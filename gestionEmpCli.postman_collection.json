@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "3614e202-ba47-492f-9b34-f4bd39bdc39b",
+		"_postman_id": "d6889f6f-21b9-4b1c-bc58-883ce267e82d",
 		"name": "gestionEmpCli API",
 		"description": "Esta es la documentación oficial de la API de servicio de empleados y clientes y sus extras.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -43,7 +43,7 @@
 							},
 							"response": [
 								{
-									"name": "Accepted",
+									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
@@ -53,15 +53,11 @@
 											}
 										],
 										"url": {
-											"raw": "http://localhost:8080/api/usuarios/empleados/:param",
-											"protocol": "http",
+											"raw": "{{baseUrl}}/empleados/:param",
 											"host": [
-												"localhost"
+												"{{baseUrl}}"
 											],
-											"port": "8080",
 											"path": [
-												"api",
-												"usuarios",
 												"empleados",
 												":param"
 											],
@@ -72,8 +68,8 @@
 											]
 										}
 									},
-									"status": "Accepted",
-									"code": 202,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -82,7 +78,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"cargo\": \"VENDEDOR\",\n  \"sueldo\": \"<double>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}"
 								}
 							]
 						},
@@ -102,7 +98,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"cargo\": \"VENDEDOR\",\n  \"sueldo\": \"<double>\"\n}",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -130,7 +126,7 @@
 							},
 							"response": [
 								{
-									"name": "Accepted",
+									"name": "OK",
 									"originalRequest": {
 										"method": "PUT",
 										"header": [
@@ -145,7 +141,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"cargo\": \"VENDEDOR\",\n  \"sueldo\": \"<double>\"\n}",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -154,15 +150,11 @@
 											}
 										},
 										"url": {
-											"raw": "http://localhost:8080/api/usuarios/empleados/:param",
-											"protocol": "http",
+											"raw": "{{baseUrl}}/empleados/:param",
 											"host": [
-												"localhost"
+												"{{baseUrl}}"
 											],
-											"port": "8080",
 											"path": [
-												"api",
-												"usuarios",
 												"empleados",
 												":param"
 											],
@@ -173,8 +165,8 @@
 											]
 										}
 									},
-									"status": "Accepted",
-									"code": 202,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -183,7 +175,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"cargo\": \"VENDEDOR\",\n  \"sueldo\": \"<double>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}"
 								}
 							]
 						},
@@ -217,15 +209,11 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8080/api/usuarios/empleados/:param",
-											"protocol": "http",
+											"raw": "{{baseUrl}}/empleados/:param",
 											"host": [
-												"localhost"
+												"{{baseUrl}}"
 											],
-											"port": "8080",
 											"path": [
-												"api",
-												"usuarios",
 												"empleados",
 												":param"
 											],
@@ -291,7 +279,7 @@
 									},
 									"response": [
 										{
-											"name": "Accepted",
+											"name": "OK",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [
@@ -301,15 +289,11 @@
 													}
 												],
 												"url": {
-													"raw": "http://localhost:8080/api/usuarios/empleados/password/:param?password=<string>",
-													"protocol": "http",
+													"raw": "{{baseUrl}}/empleados/password/:param?password=<string>",
 													"host": [
-														"localhost"
+														"{{baseUrl}}"
 													],
-													"port": "8080",
 													"path": [
-														"api",
-														"usuarios",
 														"empleados",
 														"password",
 														":param"
@@ -328,8 +312,8 @@
 													]
 												}
 											},
-											"status": "Accepted",
-											"code": 202,
+											"status": "OK",
+											"code": 200,
 											"_postman_previewlanguage": "text",
 											"header": [
 												{
@@ -338,9 +322,71 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"cargo\": \"VENDEDOR\",\n  \"sueldo\": \"<double>\"\n}"
+											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}"
 										}
 									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cargos",
+					"item": [
+						{
+							"name": "cargos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/empleados/cargos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"empleados",
+										"cargos"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/empleados/cargos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"empleados",
+												"cargos"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  \"VENDEDOR\",\n  \"CONTADOR\"\n]"
 								}
 							]
 						}
@@ -368,7 +414,7 @@
 					},
 					"response": [
 						{
-							"name": "Accepted",
+							"name": "OK",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -378,21 +424,17 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/api/usuarios/empleados",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/empleados",
 									"host": [
-										"localhost"
+										"{{baseUrl}}"
 									],
-									"port": "8080",
 									"path": [
-										"api",
-										"usuarios",
 										"empleados"
 									]
 								}
 							},
-							"status": "Accepted",
-							"code": 202,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "text",
 							"header": [
 								{
@@ -401,7 +443,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"cargo\": \"VENDEDOR\",\n    \"sueldo\": \"<double>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"cargo\": \"VENDEDOR\",\n    \"sueldo\": \"<double>\"\n  }\n]"
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  }\n]"
 						}
 					]
 				}
@@ -443,7 +485,7 @@
 							},
 							"response": [
 								{
-									"name": "Accepted",
+									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
@@ -453,15 +495,11 @@
 											}
 										],
 										"url": {
-											"raw": "http://localhost:8080/api/usuarios/clientes/:param",
-											"protocol": "http",
+											"raw": "{{baseUrl}}/clientes/:param",
 											"host": [
-												"localhost"
+												"{{baseUrl}}"
 											],
-											"port": "8080",
 											"path": [
-												"api",
-												"usuarios",
 												"clientes",
 												":param"
 											],
@@ -472,8 +510,8 @@
 											]
 										}
 									},
-									"status": "Accepted",
-									"code": 202,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -530,7 +568,7 @@
 							},
 							"response": [
 								{
-									"name": "Accepted",
+									"name": "OK",
 									"originalRequest": {
 										"method": "PUT",
 										"header": [
@@ -554,15 +592,11 @@
 											}
 										},
 										"url": {
-											"raw": "http://localhost:8080/api/usuarios/clientes/:param",
-											"protocol": "http",
+											"raw": "{{baseUrl}}/clientes/:param",
 											"host": [
-												"localhost"
+												"{{baseUrl}}"
 											],
-											"port": "8080",
 											"path": [
-												"api",
-												"usuarios",
 												"clientes",
 												":param"
 											],
@@ -573,8 +607,8 @@
 											]
 										}
 									},
-									"status": "Accepted",
-									"code": 202,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -644,7 +678,7 @@
 					]
 				},
 				{
-					"name": "listar 2",
+					"name": "listar Clientes",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -665,7 +699,7 @@
 					},
 					"response": [
 						{
-							"name": "Accepted",
+							"name": "OK",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -684,8 +718,8 @@
 									]
 								}
 							},
-							"status": "Accepted",
-							"code": 202,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "text",
 							"header": [
 								{
@@ -736,7 +770,7 @@
 							},
 							"response": [
 								{
-									"name": "Accepted",
+									"name": "OK",
 									"originalRequest": {
 										"method": "GET",
 										"header": [
@@ -761,8 +795,8 @@
 											]
 										}
 									},
-									"status": "Accepted",
-									"code": 202,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -819,7 +853,7 @@
 							},
 							"response": [
 								{
-									"name": "Accepted",
+									"name": "OK",
 									"originalRequest": {
 										"method": "PUT",
 										"header": [
@@ -858,8 +892,8 @@
 											]
 										}
 									},
-									"status": "Accepted",
-									"code": 202,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -972,7 +1006,7 @@
 									},
 									"response": [
 										{
-											"name": "Accepted",
+											"name": "OK",
 											"originalRequest": {
 												"method": "PUT",
 												"header": [
@@ -1005,8 +1039,8 @@
 													]
 												}
 											},
-											"status": "Accepted",
-											"code": 202,
+											"status": "OK",
+											"code": 200,
 											"_postman_previewlanguage": "text",
 											"header": [
 												{
@@ -1107,7 +1141,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"cargo\": \"VENDEDOR\",\n  \"sueldo\": \"<double>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}"
 								}
 							]
 						}
@@ -1153,7 +1187,7 @@
 							},
 							"response": [
 								{
-									"name": "Created",
+									"name": "OK",
 									"originalRequest": {
 										"method": "POST",
 										"header": [
@@ -1187,8 +1221,8 @@
 											]
 										}
 									},
-									"status": "Created",
-									"code": 201,
+									"status": "OK",
+									"code": 200,
 									"_postman_previewlanguage": "text",
 									"header": [
 										{
@@ -1204,7 +1238,7 @@
 					]
 				},
 				{
-					"name": "listar 3",
+					"name": "listar 2",
 					"request": {
 						"method": "GET",
 						"header": [
@@ -1225,7 +1259,7 @@
 					},
 					"response": [
 						{
-							"name": "Accepted",
+							"name": "OK",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -1244,8 +1278,8 @@
 									]
 								}
 							},
-							"status": "Accepted",
-							"code": 202,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "text",
 							"header": [
 								{
@@ -1254,7 +1288,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  }\n]"
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  }\n]"
 						}
 					]
 				}
@@ -1296,15 +1330,11 @@
 										"method": "DELETE",
 										"header": [],
 										"url": {
-											"raw": "http://localhost:8080/api/usuarios/roles/:id",
-											"protocol": "http",
+											"raw": "{{baseUrl}}/roles/:id",
 											"host": [
-												"localhost"
+												"{{baseUrl}}"
 											],
-											"port": "8080",
 											"path": [
-												"api",
-												"usuarios",
 												"roles",
 												":id"
 											],
@@ -1348,7 +1378,7 @@
 					},
 					"response": [
 						{
-							"name": "Accepted",
+							"name": "OK",
 							"originalRequest": {
 								"method": "GET",
 								"header": [
@@ -1358,21 +1388,17 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/api/usuarios/roles",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/roles",
 									"host": [
-										"localhost"
+										"{{baseUrl}}"
 									],
-									"port": "8080",
 									"path": [
-										"api",
-										"usuarios",
 										"roles"
 									]
 								}
 							},
-							"status": "Accepted",
-							"code": 202,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "text",
 							"header": [
 								{
@@ -1381,7 +1407,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"nombre\": \"ROLE_ADMIN\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"nombre\": \"ROLE_ADMIN\"\n  }\n]"
+							"body": "[\n  {\n    \"id\": \"<long>\",\n    \"nombre\": \"ROLE_USER\"\n  },\n  {\n    \"id\": \"<long>\",\n    \"nombre\": \"ROLE_USER\"\n  }\n]"
 						}
 					]
 				},
@@ -1401,7 +1427,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"id\": \"<long>\",\n  \"nombre\": \"ROLE_USER\"\n}",
+							"raw": "{\n  \"id\": \"<long>\",\n  \"nombre\": \"ROLE_ADMIN\"\n}",
 							"options": {
 								"raw": {
 									"headerFamily": "json",
@@ -1421,7 +1447,7 @@
 					},
 					"response": [
 						{
-							"name": "Created",
+							"name": "OK",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -1436,7 +1462,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"<long>\",\n  \"nombre\": \"ROLE_USER\"\n}",
+									"raw": "{\n  \"id\": \"<long>\",\n  \"nombre\": \"ROLE_ADMIN\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1445,21 +1471,17 @@
 									}
 								},
 								"url": {
-									"raw": "http://localhost:8080/api/usuarios/roles",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/roles",
 									"host": [
-										"localhost"
+										"{{baseUrl}}"
 									],
-									"port": "8080",
 									"path": [
-										"api",
-										"usuarios",
 										"roles"
 									]
 								}
 							},
-							"status": "Created",
-							"code": 201,
+							"status": "OK",
+							"code": 200,
 							"_postman_previewlanguage": "text",
 							"header": [
 								{
@@ -1468,7 +1490,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n  \"id\": \"<long>\",\n  \"nombre\": \"ROLE_USER\"\n}"
+							"body": "{\n  \"id\": \"<long>\",\n  \"nombre\": \"ROLE_ADMIN\"\n}"
 						}
 					]
 				}
@@ -1524,15 +1546,11 @@
 													}
 												],
 												"url": {
-													"raw": "http://localhost:8080/api/usuarios/paises/region/:region",
-													"protocol": "http",
+													"raw": "{{baseUrl}}/paises/region/:region",
 													"host": [
-														"localhost"
+														"{{baseUrl}}"
 													],
-													"port": "8080",
 													"path": [
-														"api",
-														"usuarios",
 														"paises",
 														"region",
 														":region"
@@ -1598,15 +1616,11 @@
 											}
 										],
 										"url": {
-											"raw": "http://localhost:8080/api/usuarios/paises/codigos-de-llamda",
-											"protocol": "http",
+											"raw": "{{baseUrl}}/paises/codigos-de-llamda",
 											"host": [
-												"localhost"
+												"{{baseUrl}}"
 											],
-											"port": "8080",
 											"path": [
-												"api",
-												"usuarios",
 												"paises",
 												"codigos-de-llamda"
 											]
@@ -1660,15 +1674,11 @@
 									}
 								],
 								"url": {
-									"raw": "http://localhost:8080/api/usuarios/paises",
-									"protocol": "http",
+									"raw": "{{baseUrl}}/paises",
 									"host": [
-										"localhost"
+										"{{baseUrl}}"
 									],
-									"port": "8080",
 									"path": [
-										"api",
-										"usuarios",
 										"paises"
 									]
 								}
@@ -1720,7 +1730,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "{{}token}",
+				"value": "{{token}}",
 				"type": "string"
 			}
 		]

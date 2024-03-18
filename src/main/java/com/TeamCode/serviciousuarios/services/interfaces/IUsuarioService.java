@@ -17,6 +17,5 @@ public interface IUsuarioService {
     Usuario editar(Usuario usuario, String email) throws MyException;
     Usuario buscarPorIdEmailDniCelular(String param) throws MyException;
     Usuario cambairPassword(String password, String param) throws MyException;
-    Boolean validarEmail(String email);
     Usuario usuarioMapper(Persona persona, String email) throws MyException;
 }

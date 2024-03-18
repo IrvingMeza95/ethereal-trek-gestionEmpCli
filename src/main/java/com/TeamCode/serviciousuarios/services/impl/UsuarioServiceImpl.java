@@ -25,11 +25,19 @@ public class UsuarioServiceImpl implements IUsuarioService {
 
     @Override
     public Usuario guardar(Usuario persona) throws MyException {
+        validarDatos(persona);
+        return usuariosRepo.save(persona);
+    }
+
+    private void validarDatos(Usuario persona) throws MyException {
         if (!validarEmail(persona.getEmail()))
             throw new MyException("La dirección de correo no es válida.");
+        if (persona.getDni().isEmpty() || persona.getDni().equals(" "))
+            throw new MyException("El dni no es válido.");
+        if (persona.getCelular().isEmpty() || persona.getCelular().equals(" "))
+            throw new MyException("El celular no es válido.");
         if (persona.getRoles().isEmpty())
             throw new MyException("Es necesario asignar al menos un role al usuario.");
-        return usuariosRepo.save(persona);
     }
 
     @Override
@@ -88,8 +96,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
         return usuariosRepo.save(usuarioBd);
     }
 
-    @Override
-    public Boolean validarEmail(String email) {
+    private Boolean validarEmail(String email) {
         Matcher matcher = pattern.matcher(email);
         return matcher.matches();
     }
