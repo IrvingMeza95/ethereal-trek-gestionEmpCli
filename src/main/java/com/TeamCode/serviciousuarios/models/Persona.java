@@ -31,4 +31,6 @@ public abstract class Persona {
     private String password;
     @Column(nullable = true, length = 250)
     private String direccion;
+    @Column(nullable = false)
+    private Boolean enabled;
 }

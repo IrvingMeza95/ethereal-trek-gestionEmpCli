@@ -1,6 +1,5 @@
 package com.TeamCode.serviciousuarios.models;
 
-import com.TeamCode.serviciousuarios.enums.Cargo;
 import jakarta.persistence.*;
 import lombok.*;
 

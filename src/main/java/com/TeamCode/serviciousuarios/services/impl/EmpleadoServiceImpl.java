@@ -29,11 +29,7 @@ public class EmpleadoServiceImpl implements IEmpleadoService {
         if (empleado.getPassword() == null || empleado.getPassword().equals(""))
             throw new MyException("La contraseña no puede ser nula.");
         Empleado nuevoEmpleado = new Empleado();
-        nuevoEmpleado.setNombre(empleado.getNombre());
-        nuevoEmpleado.setApellido(empleado.getApellido());
-        nuevoEmpleado.setEmail(empleado.getEmail());
-        nuevoEmpleado.setDni(empleado.getDni());
-        nuevoEmpleado.setCelular(empleado.getCelular());
+        iPersonaService.crear(empleado, nuevoEmpleado);
         nuevoEmpleado.setPassword(empleado.getPassword());
         nuevoEmpleado.setCargo(Cargo.VENDEDOR.name());
         nuevoEmpleado.setSueldo(0D);

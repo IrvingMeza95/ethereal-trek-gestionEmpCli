@@ -16,5 +16,7 @@ public class PersonaMapper {
         personaDTO.setCelular(persona.getCelular());
         personaDTO.setEmail(persona.getEmail());
         personaDTO.setDireccion(persona.getDireccion());
+        personaDTO.setEnabled(persona.getEnabled());
+        personaDTO.setDireccion(persona.getDireccion());
     }
 }

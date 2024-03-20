@@ -26,11 +26,7 @@ public class ClienteServiceImpl implements IClienteService {
     @Override
     public Cliente guardar(Usuario cliente) {
         Cliente nuevoCliente = new Cliente();
-        nuevoCliente.setNombre(cliente.getNombre());
-        nuevoCliente.setApellido(cliente.getApellido());
-        nuevoCliente.setEmail(cliente.getEmail());
-        nuevoCliente.setDni(cliente.getDni());
-        nuevoCliente.setCelular(cliente.getCelular());
+        iPersonaService.crear(cliente,nuevoCliente);
         return clienteRepo.save(nuevoCliente);
     }
 

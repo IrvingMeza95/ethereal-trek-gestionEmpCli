@@ -1,6 +1,5 @@
 package com.TeamCode.serviciousuarios.dtos;
 
-import com.TeamCode.serviciousuarios.enums.Cargo;
 import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)

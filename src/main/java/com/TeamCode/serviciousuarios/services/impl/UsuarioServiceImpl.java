@@ -108,7 +108,7 @@ public class UsuarioServiceImpl implements IUsuarioService {
         usuario.setEmail(persona.getEmail());
         usuario.setDni(persona.getDni());
         usuario.setCelular(persona.getCelular());
-        usuario.setEnabled(true);
+        usuario.setEnabled(persona.getEnabled());
         usuario.setIntentos(0);
         return editar(usuario,email);
     }
