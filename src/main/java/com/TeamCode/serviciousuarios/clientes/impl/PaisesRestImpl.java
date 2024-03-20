@@ -20,15 +20,18 @@ public class PaisesRestImpl {
         return extraerPaises(iPaisesRest.buscarTodos());
     }
 
-    public List<String> extraerCodigosDeLlamadaPorPaises(){
+    public List<String> extraerCodigosDeLlamadaPorPaises(String paisSeleccionado){
         Object[] paises = iPaisesRest.buscarTodos();
         List<String> codigos = new ArrayList<>();
         for (Object pais : paises){
-            String root = (String) ((Map)((Map)pais).get("idd")).get("root");
-            List<String> suffixes = (List<String>) ((Map)((Map)pais).get("idd")).get("suffixes");
-            if (suffixes != null){
-                for (String codigo : suffixes){
-                    codigos.add(root + codigo);
+            String common = String.valueOf(((Map)((Map)pais).get("name")).get("common"));
+            if (common.equalsIgnoreCase(paisSeleccionado)){
+                String root = (String) ((Map)((Map)pais).get("idd")).get("root");
+                List<String> suffixes = (List<String>) ((Map)((Map)pais).get("idd")).get("suffixes");
+                if (suffixes != null){
+                    for (String codigo : suffixes){
+                        codigos.add(root + codigo);
+                    }
                 }
             }
         }

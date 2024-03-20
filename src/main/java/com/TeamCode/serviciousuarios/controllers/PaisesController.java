@@ -26,9 +26,9 @@ public class PaisesController {
         return paises.buscarTodos();
     }
 
-    @GetMapping("/codigos-de-llamda")
-    public List<String> codigosDeLlamada(){
-        return paises.extraerCodigosDeLlamadaPorPaises();
+    @GetMapping("/codigos-de-llamda/{pais}")
+    public List<String> codigosDeLlamada(@PathVariable String pais){
+        return paises.extraerCodigosDeLlamadaPorPaises(pais);
     }
 
 }

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "457162c4-0396-4ef4-9872-3c4351c8099e",
+		"_postman_id": "566847e3-e124-4945-9996-976dfba5e7cb",
 		"name": "gestionEmpCli API",
 		"description": "Esta es la documentación oficial de la API de servicio de empleados y clientes y sus extras.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -35,7 +35,8 @@
 									"variable": [
 										{
 											"key": "param",
-											"value": "8781112343"
+											"value": "<string>",
+											"description": "(Required) "
 										}
 									]
 								}
@@ -77,7 +78,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\",\n  \"enabled\": \"<boolean>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}"
 								}
 							]
 						},
@@ -97,7 +98,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"id\": \"aa01abd6-32a8-4f04-96f8-bf14cd86003b\",\n    \"nombre\": \"elda\",\n    \"apellido\": \"flores\",\n    \"dni\": \"56789\",\n    \"fechaNac\": \"1995-06-27\",\n    \"pais\": \"mexico\",\n    \"celular\": \"8787024020\",\n    \"email\": \"eldaflores72@gmail.com\",\n    \"direccion\": \"calle colonia numerp\",\n    \"enabled\": true,\n    \"cargo\": \"VENDEDOR\",\n    \"sueldo\": 1000\n}",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -117,7 +118,7 @@
 									"variable": [
 										{
 											"key": "param",
-											"value": "8787024020",
+											"value": "<string>",
 											"description": "(Required) "
 										}
 									]
@@ -174,7 +175,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\",\n  \"enabled\": \"<boolean>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}"
 								}
 							]
 						},
@@ -321,7 +322,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\",\n  \"enabled\": \"<boolean>\"\n}"
+											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"cargo\": \"<string>\",\n  \"sueldo\": \"<double>\"\n}"
 										}
 									]
 								}
@@ -442,7 +443,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\",\n    \"enabled\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\",\n    \"enabled\": \"<boolean>\"\n  }\n]"
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\",\n    \"cargo\": \"<string>\",\n    \"sueldo\": \"<double>\"\n  }\n]"
 						}
 					]
 				}
@@ -519,7 +520,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"enabled\": \"<boolean>\"\n}"
 								}
 							]
 						},
@@ -616,7 +617,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"fechaNac\": \"<string>\",\n  \"pais\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"email\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"enabled\": \"<boolean>\"\n}"
 								}
 							]
 						},
@@ -727,7 +728,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\"\n  }\n]"
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"fechaNac\": \"<string>\",\n    \"pais\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"email\": \"<string>\",\n    \"direccion\": \"<string>\",\n    \"enabled\": \"<boolean>\"\n  }\n]"
 						}
 					]
 				}
@@ -804,7 +805,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
 								}
 							]
 						},
@@ -824,7 +825,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -867,7 +868,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -901,7 +902,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
+									"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
 								}
 							]
 						},
@@ -1048,7 +1049,7 @@
 												}
 											],
 											"cookie": [],
-											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
+											"body": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}"
 										}
 									]
 								}
@@ -1075,7 +1076,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"nombre\": \"elda\",\n  \"apellido\": \"flores\",\n  \"email\": \"eldaflores72@gmail.com\",\n  \"password\": \"123456\",\n  \"celular\": \"8787024020\",\n  \"dni\": \"56789\",\n  \"roles\": [\n    {\n      \"id\": 2\n    }\n  ],\n  \"enabled\": true,\n  \"intentos\": 0\n}",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1111,7 +1112,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1165,7 +1166,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+									"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 									"options": {
 										"raw": {
 											"headerFamily": "json",
@@ -1201,7 +1202,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_USER\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
+											"raw": "{\n  \"id\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"apellido\": \"<string>\",\n  \"email\": \"<string>\",\n  \"password\": \"<string>\",\n  \"celular\": \"<string>\",\n  \"dni\": \"<string>\",\n  \"roles\": [\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"nombre\": \"ROLE_ADMIN\"\n    }\n  ],\n  \"enabled\": \"<boolean>\",\n  \"intentos\": \"<integer>\"\n}",
 											"options": {
 												"raw": {
 													"headerFamily": "json",
@@ -1287,7 +1288,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  }\n]"
+							"body": "[\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  },\n  {\n    \"id\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"apellido\": \"<string>\",\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"celular\": \"<string>\",\n    \"dni\": \"<string>\",\n    \"roles\": [\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_ADMIN\"\n      },\n      {\n        \"id\": \"<long>\",\n        \"nombre\": \"ROLE_USER\"\n      }\n    ],\n    \"enabled\": \"<boolean>\",\n    \"intentos\": \"<integer>\"\n  }\n]"
 						}
 					]
 				}
@@ -1583,30 +1584,11 @@
 					"name": "codigos-de-llamda",
 					"item": [
 						{
-							"name": "codigos De Llamada",
-							"request": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseUrl}}/paises/codigos-de-llamda",
-									"host": [
-										"{{baseUrl}}"
-									],
-									"path": [
-										"paises",
-										"codigos-de-llamda"
-									]
-								}
-							},
-							"response": [
+							"name": "{pais}",
+							"item": [
 								{
-									"name": "OK",
-									"originalRequest": {
+									"name": "codigos De Llamada",
+									"request": {
 										"method": "GET",
 										"header": [
 											{
@@ -1615,27 +1597,65 @@
 											}
 										],
 										"url": {
-											"raw": "{{baseUrl}}/paises/codigos-de-llamda",
+											"raw": "{{baseUrl}}/paises/codigos-de-llamda/:pais",
 											"host": [
 												"{{baseUrl}}"
 											],
 											"path": [
 												"paises",
-												"codigos-de-llamda"
+												"codigos-de-llamda",
+												":pais"
+											],
+											"variable": [
+												{
+													"key": "pais",
+													"value": "Afghanistan",
+													"description": "(Required) "
+												}
 											]
 										}
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "text",
-									"header": [
+									"response": [
 										{
-											"key": "Content-Type",
-											"value": "*/*"
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/paises/codigos-de-llamda/:pais",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"paises",
+														"codigos-de-llamda",
+														":pais"
+													],
+													"variable": [
+														{
+															"key": "pais"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  \"<string>\",\n  \"<string>\"\n]"
 										}
-									],
-									"cookie": [],
-									"body": "[\n  \"<string>\",\n  \"<string>\"\n]"
+									]
 								}
 							]
 						}
@@ -1696,6 +1716,31 @@
 						}
 					]
 				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
 			]
 		}
 	],
@@ -1738,7 +1783,7 @@
 		},
 		{
 			"key": "token",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJpcnZpbmdtZXphOTVAZ21haWwuY29tIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImFwZWxsaWRvIjoibWV6YSIsImNvcnJlbyI6ImlydmluZ21lemE5NUBnbWFpbC5jb20iLCJleHAiOjE3MTA5NjI3MTcsIm5vbWJyZSI6ImlydmluZyIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iXSwianRpIjoiZmRkNTM1NzgtOGMzOC00MjRmLWFjY2MtYmUzYTUxYmQ1YTdlIiwiY2xpZW50X2lkIjoiZnJvbnRfYXBwIn0.AX3SnQBayf4OlD44qB5NbI34O3_mrZtRi5dNdggaH-E",
+			"value": "",
 			"type": "string"
 		}
 	]
