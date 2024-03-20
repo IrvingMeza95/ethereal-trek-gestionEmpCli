@@ -1,11 +1,11 @@
 package com.TeamCode.serviciousuarios.services.interfaces;
 
 import com.TeamCode.serviciousuarios.models.Role;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Repository
+@Component
 public interface IRoleService {
     Role guardar(Role role);
     void eliminar(Long id);

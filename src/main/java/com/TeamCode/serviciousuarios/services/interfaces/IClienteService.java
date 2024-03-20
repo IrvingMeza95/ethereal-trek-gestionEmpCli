@@ -3,11 +3,11 @@ package com.TeamCode.serviciousuarios.services.interfaces;
 import com.TeamCode.serviciousuarios.exceptions.MyException;
 import com.TeamCode.serviciousuarios.models.Cliente;
 import com.TeamCode.serviciousuarios.models.Usuario;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@Repository
+@Component
 public interface IClienteService {
     Cliente guardar(Usuario cliente);
     Cliente editar(Cliente cliente, String param) throws MyException;
