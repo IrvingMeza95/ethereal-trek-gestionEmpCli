@@ -13,6 +13,7 @@ public class PersonaMapper {
         personaDTO.setDni(persona.getDni());
         personaDTO.setFechaNac(persona.getFechaNac());
         personaDTO.setPais(persona.getPais());
+        personaDTO.setCodigoDeLlamada(persona.getCodigoDeLlamada());
         personaDTO.setCelular(persona.getCelular());
         personaDTO.setEmail(persona.getEmail());
         personaDTO.setDireccion(persona.getDireccion());

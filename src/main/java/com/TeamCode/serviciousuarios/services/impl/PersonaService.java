@@ -15,6 +15,8 @@ public class PersonaService implements IPersonaService {
         persona.setDni(usuario.getDni());
         persona.setCelular(usuario.getCelular());
         persona.setEnabled(true);
+        persona.setPais(usuario.getPais());
+        persona.setCodigoDeLlamada(usuario.getCodigoDeLlamada());
     }
 
     @Override
@@ -27,6 +29,7 @@ public class PersonaService implements IPersonaService {
         personaDb.setPais(nuevaPersona.getPais());
         personaDb.setFechaNac(nuevaPersona.getFechaNac());
         personaDb.setDireccion(nuevaPersona.getDireccion());
+        personaDb.setCodigoDeLlamada(nuevaPersona.getCodigoDeLlamada());
         personaDb.setEnabled(nuevaPersona.getEnabled());
     }
 }

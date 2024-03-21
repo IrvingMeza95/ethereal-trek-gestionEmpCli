@@ -33,4 +33,6 @@ public abstract class Persona {
     private String direccion;
     @Column(nullable = false)
     private Boolean enabled;
+    @Column(nullable = false)
+    private String codigoDeLlamada;
 }

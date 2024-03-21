@@ -25,6 +25,8 @@ public class Usuario {
     private String email;
     @Column(nullable = true)
     private String password;
+    @Column(nullable = false)
+    private String codigoDeLlamada;
     @Column(unique = true, nullable = false)
     private String celular;
     @Column(nullable = false, unique = true)
@@ -36,6 +38,8 @@ public class Usuario {
             uniqueConstraints = {@UniqueConstraint(columnNames = { "usuario_id", "rol_id" }) }
     )
     private List<Role> roles;
+    @Column(nullable = false)
+    private String pais;
     @Column(nullable = false)
     private Boolean enabled;
     @Column(nullable = false)

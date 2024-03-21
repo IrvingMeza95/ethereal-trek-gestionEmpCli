@@ -16,4 +16,5 @@ public abstract class PersonaDTO {
     private String email;
     private String direccion;
     private Boolean enabled;
+    private String codigoDeLlamada;
 }

@@ -34,8 +34,12 @@ public class UsuarioServiceImpl implements IUsuarioService {
             throw new MyException("La dirección de correo no es válida.");
         if (persona.getDni().isEmpty() || persona.getDni().equals(" "))
             throw new MyException("El dni no es válido.");
+        if (persona.getCodigoDeLlamada().isEmpty() || persona.getCodigoDeLlamada().equals(" "))
+            throw new MyException("El codigo de llamada no es válido.");
         if (persona.getCelular().isEmpty() || persona.getCelular().equals(" "))
             throw new MyException("El celular no es válido.");
+        if (persona.getPais().isEmpty() || persona.getPais().equals(" "))
+            throw new MyException("El pais no es válido.");
         if (persona.getRoles().isEmpty())
             throw new MyException("Es necesario asignar al menos un role al usuario.");
     }
@@ -75,6 +79,8 @@ public class UsuarioServiceImpl implements IUsuarioService {
         usuarioBd.setDni(usuario.getDni());
         usuarioBd.setEnabled(usuario.getEnabled());
         usuarioBd.setIntentos(usuario.getIntentos());
+        usuarioBd.setPais(usuario.getPais());
+        usuarioBd.setCodigoDeLlamada(usuario.getCodigoDeLlamada());
         return usuariosRepo.save(usuarioBd);
     }
 
@@ -110,6 +116,8 @@ public class UsuarioServiceImpl implements IUsuarioService {
         usuario.setCelular(persona.getCelular());
         usuario.setEnabled(persona.getEnabled());
         usuario.setIntentos(0);
+        usuario.setPais(persona.getPais());
+        usuario.setCodigoDeLlamada(persona.getCodigoDeLlamada());
         return editar(usuario,email);
     }
 
