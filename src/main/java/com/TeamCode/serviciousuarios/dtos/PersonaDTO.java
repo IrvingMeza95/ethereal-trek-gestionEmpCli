@@ -1,6 +1,9 @@
 package com.TeamCode.serviciousuarios.dtos;
 
+import com.TeamCode.serviciousuarios.models.Role;
 import lombok.*;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -17,4 +20,6 @@ public abstract class PersonaDTO {
     private String direccion;
     private Boolean enabled;
     private String codigoDeLlamada;
+    private List<Role> roles;
+
 }
